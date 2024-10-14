@@ -6,7 +6,7 @@
 /*   By: operez-l <operez-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:07:20 by operez-l          #+#    #+#             */
-/*   Updated: 2024/10/11 12:37:01 by operez-l         ###   ########.fr       */
+/*   Updated: 2024/10/14 13:33:04 by operez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*current;
 	t_list	*next_node;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || !del)
 		return ;
 	current = *lst;
 	while (current != NULL)

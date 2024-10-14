@@ -6,7 +6,7 @@
 /*   By: operez-l <operez-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:25:03 by operez-l          #+#    #+#             */
-/*   Updated: 2024/10/11 12:46:45 by operez-l         ###   ########.fr       */
+/*   Updated: 2024/10/14 13:43:29 by operez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*new_node;
 
+	if (!lst || !f || !del)
+		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{

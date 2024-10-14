@@ -6,7 +6,7 @@
 /*   By: operez-l <operez-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 14:37:13 by operez-l          #+#    #+#             */
-/*   Updated: 2024/10/04 11:58:59 by operez-l         ###   ########.fr       */
+/*   Updated: 2024/10/14 13:28:46 by operez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*result;
 	size_t	i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	result = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 	if (!result)
-	{
 		return (NULL);
-	}
 	i = 0;
 	while (i < len1)
 	{
